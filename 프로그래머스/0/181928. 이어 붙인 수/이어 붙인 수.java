@@ -1,0 +1,19 @@
+class Solution {
+    public int solution(int[] num_list) {
+        int answer = 0;
+        int i;
+        String odd_num = "";
+        String even_num = "";
+        
+        for (i = 0; i < num_list.length; i++) {
+            if (num_list[i] % 2 == 1) {
+                odd_num += num_list[i];
+            } else if (num_list[i] % 2 == 0) {
+                even_num += num_list[i];
+            }
+        }
+        answer = Integer.valueOf(odd_num) + Integer.valueOf(even_num);
+        
+        return answer;
+    }
+}
